@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: prudentes
+        psr4_prefix: prudentes
         src_path: app

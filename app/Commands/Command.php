@@ -1,4 +1,4 @@
-<?php namespace App\Commands;
+<?php namespace prudentes\Commands;
 
 abstract class Command {
 

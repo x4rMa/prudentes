@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers;
+<?php namespace prudentes\Http\Controllers;
 
 class WelcomeController extends Controller {
 
@@ -31,6 +31,11 @@ class WelcomeController extends Controller {
 	public function index()
 	{
 		return view('welcome');
+	}
+
+	public function login()
+	{
+		return view('auth.login');
 	}
 
 }
