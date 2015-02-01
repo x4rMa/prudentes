@@ -1,0 +1,56 @@
+//default settings
+html,body {
+	height:100%;
+	font-family:$text;
+}
+img {
+	width:100%;
+}
+//basic layout
+.wrapper {
+	min-height: 100%;
+ 	margin-bottom: -5.1rem;
+ 	background:$base;
+ 	&:after {
+ 		height:5.1rem;
+ 		content: "";
+		display: block;
+ 	}
+}
+.sections {
+	max-width: 1800px;
+
+	@include center();
+	@include clearfix();	
+}
+.fullWidth {
+	width:100%;
+}
+.header {
+	position:relative;
+	//border-bottom: 1px solid $mainColor;
+}
+.content {
+	padding: 1rem 0 2rem 0;
+}
+.footer {
+	//border-top: 1px solid $mainColor;
+	height: 5rem;
+	clear: both;
+}
+
+.back {
+		text-decoration: none;
+		color: $interfaceColor !important;
+		font-size:1rem;
+		&:link {
+			color: $interfaceColor !important;
+		}
+		&:visited {
+			color: $interfaceColor !important;
+		}
+		&:hover {
+			@include transition();
+			color: darken($interfaceColor, 10%) !important;
+		}
+	}

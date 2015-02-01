@@ -1,0 +1,92 @@
+.lesson {
+	list-style: none;
+	margin:0 auto;
+	max-width:1200px;
+	width:90%;
+	h1 {
+		color: $mainColor;
+		font-size: 3.5rem;
+		margin-bottom: 1rem;
+	}
+	h2 {
+		color: $textColor;
+		margin: 3rem 0 2rem 0;
+		font-size: 3.5rem;
+	}
+	.lessonHeader {
+		@include clearfix();
+		width: 100%;
+		h1 {
+			margin-top: 1rem;
+			margin-bottom: 2rem;
+			color: $mainColor;
+			font-size: 5rem;
+		}
+		
+		p {
+			font-size: 1.25rem;
+			width: 50rem;
+			margin-bottom: 2rem;
+			color: $interfaceColor;
+		}
+		.lessonParent{
+			font-style: italic;
+			a {
+				&:hover {
+					@include transition();
+					color: darken($interfaceColor,10%) !important;
+				}
+				&:link {
+					color: $interfaceColor;
+					text-decoration: none;
+				}
+				&:visited {
+					color: $interfaceColor;
+					text-decoration: none;
+				}
+			}
+		}
+		iframe {
+			float:left;
+			margin-right: 7.5rem;
+		}
+	}
+	.lessonButtons {
+		float: right;
+		float:left;
+		width:20rem;
+		.down {
+			position:relative;
+			top:1.75rem;
+		}
+		a {
+			display: inline-block;
+			border:1px solid $mainColor;
+			text-align: center;
+			text-decoration: none;
+			font-size: 1.5rem;
+			padding:1rem;
+			margin: 0 1rem 1rem 1rem;
+			height: 5rem;
+			width: 15rem;
+			&:hover {
+				@include transition();
+				color:$base !important;
+				background:darken($mainColor, 20%);
+			}
+			&:link {
+				color:  darken($mainColor, 20%);
+				text-decoration: none;
+			}
+			&:visited {
+				color:  darken($mainColor, 20%);
+				text-decoration: none;
+			}
+		}
+	}
+	.courseOverview {
+		table {
+			margin-left: -4rem !important;
+		}
+	}
+}

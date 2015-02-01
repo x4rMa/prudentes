@@ -11,12 +11,28 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-Route::get('login', 'WelcomeController@login');
+//navigation
+Route::get( '/',					[ 'as' => 'index',		'uses' => 'NavigationController@showIndex'		]);
+Route::get( 'kurser', 				[ 'as' => 'courses',		'uses' => 'NavigationController@showCourses'		]);
+Route::get( 'login', 				[ 'as' => 'login',		'uses' => 'NavigationController@showLogin'		]);
+Route::get( 'opret-bruger',			[ 'as' => 'createUser',		'uses' => 'NavigationController@showCreateUser'		]);
+Route::get( 'min-menu',			[ 'as' => 'menu',		'uses' => 'NavigationController@showMenu'		]);
 
-Route::get('home', 'HomeController@index');
+//courses	
+Route::get( 'kurser/{category}',		[ 'as' => 'category', 		'uses' => 'NavigationController@showCategory'		]);
+Route::get( 'kursus/{course}',		[ 'as' => 'course', 		'uses' => 'NavigationController@showCourse'		]);
+Route::get( 'kursus/{course}/{lesson}',	[ 'as' => 'lesson', 		'uses' => 'NavigationController@showLesson'		]);
+	
+//dashboard
+Route::get( 'mine-kurser', 			[ 'as' => 'myCourses',	'uses' => 'NavigationController@showMyCourses'		]);
+Route::get( 'udgivne-kurser',			[ 'as' => 'teachingCourses',	'uses' => 'NavigationController@showTeachingCourses'	]);
+Route::get( 'opret-kursus', 			[ 'as' => 'createCourse',	'uses' => 'NavigationController@showCreateCourse'	]);
+Route::get( 'ret-profil', 			[ 'as' => 'editProfile',		'uses' => 'NavigationController@showEditProfile'		]);
+Route::get( 'min-ønskeliste',			[ 'as' => 'wishlist',		'uses' => 'NavigationController@showWishlist'		]);
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+//footer
+Route::get( 'om', 				[ 'as' => 'about',		'uses' => 'NavigationController@showAbout'		]);
+Route::get( 'faq', 				[ 'as' => 'faq',			'uses' => 'NavigationController@showFaq'			]);
+Route::get( 'support', 				[ 'as' => 'support',		'uses' => 'NavigationController@showSupport'		]);
+Route::get( 'kontakt', 				[ 'as' => 'contact',		'uses' => 'NavigationController@showContact'		]);
+

@@ -1,0 +1,26 @@
+//assets
+@import 'modules/assets/cssReset';
+@import 'modules/assets/variables';
+@import 'modules/assets/mixins';
+//@import 'fontAwesome/font-awesome';
+
+//layouts
+@import 'modules/layouts/base';
+@import 'modules/layouts/dashboard';
+@import 'modules/layouts/logo';
+@import 'modules/layouts/forms';
+@import 'modules/layouts/siteNavigation';
+
+@import 'modules/layouts/lesson';
+@import 'modules/layouts/course';
+@import 'modules/layouts/courseList';
+@import 'modules/layouts/courseNavigation';
+
+@import 'modules/layouts/landingPage1';
+@import 'modules/layouts/landingPage2';
+
+@import 'modules/layouts/pagination';
+@import 'modules/layouts/footer';
+
+//userMenu
+@import 'modules/layouts/menu';

@@ -1,0 +1,53 @@
+.courseList {
+	display:inline-block;
+	margin-left:17.5rem;
+	ul {
+		@include clearfix();
+		list-style:none;
+		display: inline-block;
+		width: 100%;
+		li {
+			float: left;
+			height: 20.5rem;
+			width: 17.5rem;
+			margin:1%;
+			border:1px solid $mainColor;
+			cursor: pointer;
+			&:hover {
+				border:1px dashed $mainColor;
+			}
+		}
+	}
+	.courseImg {
+		margin-bottom: 0.5rem;
+		height:50%;
+		width:100%;
+		border-bottom:1px solid $mainColor;
+		img {
+			height:100%;
+		}
+	}
+	.courseTitel {
+		font-size:1.125rem;
+		color: darken($mainColor, 20%);
+		margin: 0.5rem;
+		line-height: 1.25rem;
+
+	}
+	.courseFacts {
+		font-size:1rem;
+		color:$textColor;
+		line-height: 125%;
+		margin: 0.5rem;
+		margin-left: 1rem;
+		tr td{
+			min-width: 6rem;
+		}
+		.darken {
+			color: darken($textColor, 20%);
+		}
+		.underline {
+			text-decoration: underline;
+		}
+	}
+}

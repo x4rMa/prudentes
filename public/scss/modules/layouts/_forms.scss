@@ -1,0 +1,51 @@
+.forms {
+	text-align: left;
+	margin: 0 auto;
+	max-width:600px;
+	color: $linkColor;
+	font: {
+		family:$text;
+		size:2rem;
+	}
+	form {
+		label, input {
+			display:inline-block;
+			margin-bottom: 0.5rem;
+		}
+		input {
+			padding:1rem;
+			font-family:$text;
+			font-size:2rem;
+			width: 90%;
+			color:#000000;
+			&:focus {
+				border: 3px solid $mainColor;
+				outline: none !important;
+			}
+		}
+		input[type="submit"] {
+			@include transition();
+			width: 40%;
+			color: darken($eyeCatch, 20%);
+			background: none;
+			border: 2px solid $eyeCatch;
+			background:none;
+			&:hover {
+				background: $eyeCatch;
+				border: 2px solid $eyeCatch;
+				@include transition();
+				cursor:pointer;
+			}
+		}
+	}
+	a {
+		float:right;
+		font-size:1.5rem;
+		text-decoration: none;
+		color: darken($eyeCatch, 20%);
+		margin: -1.75rem 0 0 0;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

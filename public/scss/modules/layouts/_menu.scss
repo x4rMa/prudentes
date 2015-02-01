@@ -1,0 +1,49 @@
+.menu {
+	.menuItem {
+		display: block;
+		height:10rem;
+	}
+	.menuIcon {
+		height:7.5rem;
+		width:7.5rem;
+		float:left;
+		margin-right: 2rem;
+	}
+	.menuDescription {
+		height:7.5rem;
+		width:60%;
+		display: inline-block;
+		float: left;
+		p {
+			text-align: left;
+			padding-top:0.5rem;
+			font-size:1.25rem;
+			color:$textColor;
+			line-height: 125%;
+		}
+	}
+	a {
+		float: right;
+		border:1px solid $interfaceColor;
+		height:7.5rem;
+		width:30%;
+		text-align: center;
+		text-decoration: none;
+		font-size: 1.5rem;
+		&:link {
+			color: $interfaceColor;
+		}
+		&:visited {
+			color: $interfaceColor;
+		}
+		&:hover {
+			@include transition();
+			color:white;
+			background:$interfaceColor;
+		}
+		.menuButton {
+			position:relative;
+			top:40%;
+		}
+	}
+}

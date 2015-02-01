@@ -1,0 +1,82 @@
+.landingPage2 {
+	text-align: center;
+	margin: 0 auto;
+	max-width:1200px;
+	overflow: hidden;
+	font-family:$text;
+	.hero {
+		padding:  2rem;
+		//border-bottom: 1px solid $mainColor;
+	}
+	.title {
+		color: $mainColor;
+		font-size: 3.5rem;
+		margin-bottom: 2rem;
+	}
+	.subtitle {
+		color: $mainColor;
+		font-size: 3rem;
+		margin-bottom: 2rem;
+	}
+	.highlights {
+		display: block;
+		height:20rem;
+		width:100%;
+		padding: 4rem 0 4rem 0;
+		margin-bottom: 2rem;
+		//border-bottom: 1px solid $mainColor;
+		text-align: left;
+	}
+	
+	.icon {
+		img {
+			width:25rem;
+			display:inline-block;
+		}
+	}
+	.left .icon {
+		float: left;
+		margin-right: 5rem;
+	}
+	.right .icon{
+			float:right;
+			margin-left: 5rem;
+	}
+	.feature {
+		font-size:2.5rem;
+		color:$mainColor;
+		margin-bottom: 2rem;
+	}
+	.benefit {
+		display: inline-block;
+		width:40rem;
+		font-size:1.75rem;
+		color:$textColor;
+		line-height: 125%;
+	}
+	.button {
+		@include transition();
+		padding: 2rem 0.75rem 0.75rem 0.75rem;
+		margin: 0 auto 2rem auto;
+		display: inline-block;
+		width: 13rem;
+		height: 3.5rem;
+		border: 2px solid $eyeCatch;
+		background:none;
+		font-size:2rem;
+		text-decoration: none;
+		cursor:pointer;
+		position:relative;
+		top:20%;
+		&:link {
+			color: darken($eyeCatch, 20%);
+		}
+		&:visited {
+			color: darken($eyeCatch, 20%);
+		}
+		&:hover {
+			@include transition();
+			background: $eyeCatch;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.dashboard {
+	margin: 1rem auto 0 auto;
+	max-width:1000px;
+	font-family:$text;
+	.menuTitle {
+		margin-bottom: 2rem;
+		padding-bottom:0.5rem;
+		border-bottom: 1px dashed $interfaceColor;
+		@include clearfix();
+		h1 {
+		display: inline-block;
+		color:$interfaceColor;
+		font-size: 2rem;
+		position:relative;
+		top:3.25rem;
+		}
+		img {
+			display: inline-block;
+			float:right;
+			width:5rem;
+		}
+	}
+}

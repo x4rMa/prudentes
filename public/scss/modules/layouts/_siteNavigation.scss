@@ -1,0 +1,33 @@
+.siteNavigation {
+	float: right;
+	ul {
+		display: inline-block;
+		list-style: none; 
+	}
+	li {
+		display: inline-block;
+		float:left;
+		letter-spacing: 3px;
+		height: 1rem;
+	}
+	a {
+		@include transition();
+		display:block;	
+		padding: 0.75rem 1rem 0.75rem 1rem;
+		margin-right:0;
+		font-size: 1.5rem;
+		font-family: $text;
+		text-decoration: none;
+		&:link {	
+			color: $linkColor;
+		}
+		&:visited {
+			color: $linkColor;
+		}
+		&:hover {
+			background: $mainColor;
+			cursor:pointer;
+			@include transition();
+		}	
+	}
+}

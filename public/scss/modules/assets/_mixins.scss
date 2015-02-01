@@ -1,0 +1,81 @@
+//=========COMMON=========
+@mixin center($textAlign:none,$margin:0 auto) {
+	text-align:$textAlign;
+	margin: $margin;
+}
+
+@mixin rounded($radius: 0.5rem) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin border() {
+	border: 1px solid black;
+}
+
+@mixin clearfix() {
+	&:after {
+	 	content: "";
+	 	display: table;
+	  	clear: both;
+	}
+}
+
+//@include transition(all, 0.2s, ease-in-out);
+@mixin transition($transition-property:all, $transition-time:0.2s, $method:ease-in-out) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
+@mixin boxShadow($horizontal:0, $vertical:2px, $blur:10px, $spread:0, $color:#000000) {
+	-webkit-box-shadow: $horizontal $vertical $blur $spread $color;
+	-moz-box-shadow: $horizontal $vertical $blur $spread  $color;
+	box-shadow: $horizontal $vertical $blur $spread $color;
+}
+
+@mixin gradient($from, $to) {
+	background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+	background: -moz-linear-gradient(top,  $from, $to);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+}
+
+//=========MEDIA QUERIES=========
+
+$small: 480px;
+$medium: 800px;
+$large: 1920px;
+
+@mixin responsive($width) {
+	
+	@if $width == large {
+		@media screen and (max-width: $large) {
+			@content;
+		}
+	}
+	@else if $width == medium {
+		@media screen and (max-width: $medium) {
+			@content;
+		}
+	}
+	@else if $width == small {
+		@media screen and (max-width: $small) {
+			@content;
+		}
+	}
+}
+
+/*===
+		@include responsive (large){
+			
+		}
+		@include responsive (medium){
+
+		}
+		@include responsive (small){
+
+		}
+===*/

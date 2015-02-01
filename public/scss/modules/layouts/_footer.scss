@@ -1,0 +1,51 @@
+.footer {
+	@include center(center);
+	border-bottom:none;
+	.copyright {
+		font-family: $importantText;
+		font-size: 1.25rem;
+		position: relative;
+		top: 2rem;
+		color:$linkColor;
+	}
+	.footerLinks {
+		float:left;
+		text-transform: uppercase;
+		font-family: $text;
+		color:$linkColor;
+		margin: -0.75rem 0 0 0;
+		position:relative;
+		left:5%;
+		width:5rem;
+		height:4rem;
+	}
+	.filler {
+		margin: 0.5rem 0 0 0;
+		height:0rem;
+	}
+	h3 {
+		color: darken($mainColor, 20%);
+		text-align:left;
+		margin-bottom: 0.25rem;
+	}
+	li {
+		padding: 3% 3% 3% 0; 
+		text-align: left;
+	}
+	a {
+		text-align: left;
+		font-size: 1rem;
+		text-decoration: none;
+		&:link {
+			color:$linkColor;
+		}
+		&:visited {
+			color:$linkColor;
+		}
+		&:hover {
+			@include transition();
+			cursor:pointer;
+			text-decoration: underline;
+		}
+	}
+}

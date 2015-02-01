@@ -1,0 +1,31 @@
+.pagination {
+	text-align:center;
+	margin-top: 2rem;
+	margin-bottom: -1.5rem;
+	ul {
+		display: inline-block;
+		list-style: none;
+	}
+	li {
+		float:left;
+		@include transition();
+	}
+	a {
+		padding: 0.5rem 1rem 0.5rem 1rem;
+		font-size: 1.5rem;
+		font-family: $text;
+		text-decoration: none;
+		&:link {
+			color: $linkColor;
+		}
+		&:visited {
+			color: $linkColor;
+		}
+		&:hover {
+			color:$linkColor;
+			background:$mainColor;
+			@include transition();
+			cursor:pointer;
+		}
+	}
+}

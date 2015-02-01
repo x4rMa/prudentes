@@ -1,0 +1,45 @@
+.courseNavigation {
+	position:absolute;
+	top:4.5rem;
+	bottom:0;
+	padding: 1rem;
+	margin: 0 1rem 0 1rem;
+	width: 12.5rem;
+	float:left;
+	display:block;
+	font-family:$text;
+	h2 {
+		font-size: 1.5rem;
+		color: $mainColor;
+		margin-bottom: 1rem;
+	}
+	a {
+		text-decoration: none;
+		font-size: 1.25rem;
+		width: 100%;
+		display: inline-block;
+		border-bottom: 1px solid $mainColor;
+		padding-bottom:0.25rem;
+		margin-bottom:0.5rem;
+		&:link {
+			color:$linkColor;
+			@include transition();
+		}
+		&:hover {
+			border-bottom: 1px dashed $mainColor;
+			@include transition();
+		}
+		&:visited {
+			color:$linkColor;
+		}
+	}
+	.back {
+		margin-top:2rem !important;
+		font-size: 1rem !important;
+		color: $linkColor !important;
+		&:hover {
+			color:darken($linkColor, 40%) !important;
+			@include transition();
+		}
+	}
+}
