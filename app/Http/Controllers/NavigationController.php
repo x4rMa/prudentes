@@ -1,6 +1,5 @@
 <?php namespace prudentes\Http\Controllers;
 
-use Debugbar;
 use prudentes\Clean;
 
 class NavigationController extends Controller {
