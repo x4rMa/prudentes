@@ -32,4 +32,5 @@
 	<link rel="icon" href="{{{ asset('favicon.ico') }}}" type="image/x-icon">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="{{{ asset('js/deferVideo.js') }}}"></script>
+	<script src="{{{ asset('js/smoothScroll.js') }}}"></script>
 </html>
